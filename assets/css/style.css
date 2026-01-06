@@ -52,6 +52,12 @@ h2 {
     background-color: var(--highlight-color);
     color: white;
 }
+.row .custom-button-filled {
+    border: 2px solid var(--highlight-color);
+    background-color: var(--highlight-color);
+    color: white;
+    border-radius: 0;
+}
 /* Navbar */
 #navbar {
     background-color: var(--primary-color);
