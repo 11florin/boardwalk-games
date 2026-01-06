@@ -100,7 +100,9 @@
               <a class="nav-link" href="index.html#contact">Contact</a>
             </li>
             <li class="nav-item">
-                <a href="booking.html"  class="btn custom-button-filled ms-lg-3">Book now</a>
+              <a href="booking.html" class="btn custom-button-filled ms-lg-3"
+                >Book now</a
+              >
             </li>
           </ul>
         </div>
@@ -355,6 +357,90 @@
                 <p><em>Ages:</em> 8+</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- Reserve a game section -->
+      <section id="reserve-a-game" class="container section">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="display-6">Reserve a game</h2>
+          </div>
+          <div class="col-12 col-md-8 mx-auto">
+            <p class="my-4 card-text">
+              Reserve a board game for your next visit to Boardwalk Games. Pick
+              your challenge, and let the adventure begin! Fill out your details
+              and preferred game below, and we'll have it set aside for you when
+              you arrive.
+            </p>
+            <form action="success.html" method="GET">
+              <div class="row my-4">
+                <div class="col-12 col-xl-4">
+                  <label for="full-name" class="form-label">Full name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="full-name"
+                    id="full-name"
+                    required
+                  />
+                </div>
+                <div class="col-12 col-xl-4">
+                  <label for="number" class="form-label">Phone number</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="number"
+                    id="number"
+                    required
+                  />
+                </div>
+
+                <div class="col-12 col-xl-4">
+                  <label for="inputEmail4" class="form-label">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail4"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="col-12 col-xl-6">
+                  <label for="inputState" class="form-label mt-3" 
+                    >Select game</label
+                  >
+                  <select id="inputState" class="form-select" required>
+                    <option value="" selected>Select game</option>
+                    <option>Galaxy Pioneers</option>
+                    <option>Mystic Woods</option>
+                    <option>Captain's Gambit</option>
+                    <option>Critter Quest</option>
+                    <option>Setters of Catan</option>
+                    <option>Monopoly</option>
+                    <option>Exploding Kittens</option>
+                    <option>Cluedo</option>
+                  </select>
+                </div>
+                <div class="col-12 col-xl-6">
+                  <label for="reservation-date" class="form-label mt-3"
+                    >Requested date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="reservation-date"
+                    name="reservation-date"
+                    required
+                  />
+                  <div class="text-end mt-4">
+                    <button type="submit" class="btn custom-button-outline">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </section>
