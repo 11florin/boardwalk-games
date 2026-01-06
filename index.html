@@ -62,7 +62,11 @@
   <!-- Classes on body set to work with mt-auto on footer to ensure it always stys at the bottom of the page -->
   <body class="d-flex flex-column min-vh-100">
     <!-- Navigation -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg fixed-top"
+      data-bs-theme="dark"
+    >
       <div class="container">
         <a class="navbar-brand" href="index.html"
           ><img
@@ -352,10 +356,10 @@
             </div>
           </div>
           <div class="col-12 text-center">
-              <a href="booking.html" class="btn custom-button-outline mb-4"
-            >Book now</a
-          >
-            </div>
+            <a href="booking.html" class="btn custom-button-outline mb-4"
+              >Book now</a
+            >
+          </div>
         </div>
       </section>
     </main>
@@ -448,5 +452,27 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+    <script>
+      document
+        .querySelectorAll(".navbar-collapse .nav-link")
+        .forEach((link) => {
+          link.addEventListener("click", function (e) {
+            let section = document.querySelector(e.target.getAttribute("href"));
+            if (section) {
+              e.preventDefault(); // Prevent default anchor click behavior
+              let navbarHeight =
+                document.querySelector(".navbar-toggler").offsetHeight;
+              window.scroll({
+                top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                behavior: "smooth",
+              });
+              document
+                .querySelector(".navbar-collapse")
+                .classList.remove("show"); // Collapse navbar
+            }
+          });
+        });
+    </script>
   </body>
 </html>
